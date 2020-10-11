@@ -21,7 +21,8 @@
   ],
   "author": "validity-check",
   "dependencies": {
+    "chalk": "^4.1.0",
     "inquirer": "^7.3.3"
   },
-  "license": "GNU GPLv3"
+  "license": "MIT"
 }
