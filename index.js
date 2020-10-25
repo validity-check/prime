@@ -1,6 +1,10 @@
+#!/usr/bin/env node
+
 const inquirer = require("inquirer");
 const chalk = require("chalk");
 const fs = require("fs");
+
+const CURR_DIR = process.cwd();
 
 console.log("Welcome to Prime.");
 console.log(
@@ -72,7 +76,7 @@ inquirer
     }
 
     if (filename) {
-      fs.writeFile(filename, primes, function (err) {
+      fs.writeFile(`${CURR_DIR}/${filename}`, primes, function (err) {
         if (err) {
           return chalk.red(err);
         }
