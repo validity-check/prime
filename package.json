@@ -7,7 +7,7 @@
     "start": "node index.js"
   },
   "bin": {
-    "prime": "./bin/prime"
+    "prime": "./index.js"
   },
   "publishConfig": {
     "access": "public"
