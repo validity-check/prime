@@ -3,6 +3,7 @@
 const inquirer = require("inquirer");
 const chalk = require("chalk");
 const fs = require("fs");
+const pressAnyKey = require("press-any-key");
 
 const CURR_DIR = process.cwd();
 
@@ -78,17 +79,21 @@ inquirer
     if (filename) {
       fs.writeFile(`${CURR_DIR}/${filename}`, primes, function (err) {
         if (err) {
-          return chalk.red(err);
+          chalk.red(err);
+          return pressAnyKeyToExit();
         }
-        return console.log("File was saved successfully as " + filename);
+        console.log("File was saved successfully as " + filename);
+        return pressAnyKeyToExit();
       });
     }
     if (!filename) {
       console.log(primes);
+      pressAnyKeyToExit();
     }
   })
   .catch((err) => {
     chalk.red(err);
+    pressAnyKeyToExit();
   });
 
 function isPrime(n) {
@@ -108,4 +113,8 @@ function isPrime(n) {
   }
 
   return isPrime;
+}
+
+function pressAnyKeyToExit() {
+  pressAnyKey("Press any key to exit.");
 }
