@@ -4,7 +4,8 @@
   "description": "A program using inquirer.js which finds all prime numbers between two given numbers.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "package": "pkg ."
   },
   "bin": {
     "prime": "./index.js"
@@ -23,7 +24,11 @@
   "dependencies": {
     "chalk": "^4.1.0",
     "esm": "^3.2.25",
-    "inquirer": "^7.3.3"
+    "inquirer": "^7.3.3",
+    "press-any-key": "^0.1.1"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "pkg": "^4.4.9"
+  }
 }
