@@ -8,7 +8,10 @@ A program using inquirer.js which finds all prime numbers between two given numb
 
 To clone this you only need NodeJS (which ships NPM with it).
 
-It hasn't quite been packaged for use without Node yet, so to use it you still need Node installed.
+### Use
+Download a release from https://github.com/validity-check/prime/releases/.
+
+You can use the command line or double click the downloaded release.
 
 ### Clone
 
